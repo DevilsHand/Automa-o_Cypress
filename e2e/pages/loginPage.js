@@ -1,20 +1,22 @@
 // Elementos e acoes juntas aqui
 
 class LoginPage {
+    url = "http://www.saucedemo.com/v1/";
+
     accessPage(){
-        cy.visit("https://www.saucedemo.com/v1/");
+        cy.visit(this.url);
     }
 
     fillUser(user){
-        cy.get('id=user-name').type(Cypress.env(user))
+        cy.get('[data-test="username"]').type(user);
     }
 
     fillPassword(password){
-        cy.get('id=password').type(Cypress.env(password))
+        cy.get('[data-test="password"]').type(password);
     }
 
     clickLogin(){
-        cy.get('id=login-button').click();
+        cy.get('#login-button').click();
     }
 
 }

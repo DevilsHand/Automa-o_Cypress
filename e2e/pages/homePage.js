@@ -1,6 +1,6 @@
 class HomePage {
     validate(){
-        cy.get('class=app_logo').click();
+        cy.get('.app_logo').click();
     }
 
 }
