@@ -9,7 +9,13 @@
   "author": "Gabriel Araujo",
   "license": "ISC",
   "devDependencies": {
+    "cucumber": "^6.0.7",
     "cypress": "^13.17.0",
-    "cypress-cucumber-preprocessor": "^4.3.1"
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "node": "^23.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "e2e/step_definition"
   }
 }

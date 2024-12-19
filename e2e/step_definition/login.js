@@ -1,7 +1,8 @@
 // Steps vao nessa pagina, junto do import do login 
 
-import {Given, When, And, Then} from 'cypress-cucumber-preprocessor/Steps';
+import { Given, When, And, Then } from 'cypress-cucumber-preprocessor/steps';
 import loginPage from '../pages/loginPage';
+import homePage from '../pages/homePage'
 
 Given('estar na pagina de Login', () =>{
     loginPage.accessPage;
@@ -20,5 +21,5 @@ And('clicar em login', () =>{
 })
 
 Then('a pagina inicial aparece', ()=>{
-    
+    homePage.validate();
 })
